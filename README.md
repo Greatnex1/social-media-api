@@ -5,13 +5,10 @@ A social  media api that enable users to post,comment,follow users,unfollow user
 How to install this project: clone repository, open in intellij or visual studio code. This project is built on java(version 11), maven bild tool and springboot an extension of spring framework.
 
 
-To use this project make su
+To use this project make sure you already have JDK installation on your system, (Either set the JAVA_HOME environment variable pointing to your JDK installation or have the java executable on your PATH), maven and springframework.
 
 
-re you already have JDK installation on your system, (Either set the JAVA_HOME environment variable pointing to your JDK installation or have the java executable on your PATH), maven and springframework.
-
-
-Setting up project in MAven:
+Setting up project in Maven:
 We need to start by creating a Maven pom.xml file. The pom.xml is the recipe that is used to build your project. Open your favorite text editor and add the following:
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -39,7 +36,6 @@ The preceding listing should give you a working build. You can test it by runnin
 
 Most Spring Boot applications use the spring-boot-starter-parent in the parent section of the POM. The spring-boot-starter-parent is a special starter that provides useful Maven defaults. It also provides a dependency-management section so that you can omit version tags for “blessed” dependencies.
 
-Since we are developing a web application, we add a spring-boot-starter-web dependency. Before that, we can look at what we currently have by running the following command:
 
 
 
@@ -51,7 +47,7 @@ $ mvn dependency:tree
 [INFO] com.example:myproject:jar:0.0.1-SNAPSHOT
 
 
-he mvn dependency:tree command prints a tree representation of your project dependencies. You can see that spring-boot-starter-parent provides no dependencies by itself. To add the necessary dependencies, edit your pom.xml and add the spring-boot-starter-web dependency immediately below the parent section:
+ mvn dependency:tree command prints a tree representation of your project dependencies. You can see that spring-boot-starter-parent provides no dependencies by itself. To add the necessary dependencies, edit your pom.xml and add the spring-boot-starter-web dependency immediately below the parent section:
 
 <dependencies>
     <dependency>
@@ -63,18 +59,31 @@ he mvn dependency:tree command prints a tree representation of your project depe
 If you run mvn dependency:tree again, you see that there are now a number of additional dependencies, including the Tomcat web server and Spring Boot itself.
 
 
-To finish our application, we need to create a single Java file. By default, Maven and Gradle compile sources from src/main/java, so you need to create that directory structure and then add a file named src/main/java/SocialMedia.java to contain the following code:
+You'll be getting the following when all installation and guide is well followed
 
 
+![loading](https://github.com/Greatnex1/social-media-api/assets/72028378/37e17fea-a99f-4796-afda-940a04745da9)
+
+regiser user:
+![register](https://github.com/Greatnex1/social-media-api/assets/72028378/98494969-7b62-43b8-b10c-bc8f6e57a0f8)
+
+user login:
+![login](https://github.com/Greatnex1/social-media-api/assets/72028378/22750642-34aa-4e08-8c7c-b2ecadfb8797)
+
+comment on the post created:
+![comment](https://github.com/Greatnex1/social-media-api/assets/72028378/d5a666da-6c5f-448c-ad4a-02e5e3af8781)
 
 
+I used maildev to serve as a platform for pseudo mails, so, a verification link and welcome message is sent to an individual who just registered.
+
+![verified](https://github.com/Greatnex1/social-media-api/assets/72028378/93b6e65e-c695-46c3-b1ee-03c04cdbacac)
+
+All configurations are in a yaml.file integrated with application.properties.
+
+Test was carried out using mockito.
 
 
-![crop](https://github.com/Greatnex1/social-media-api/assets/72028378/6cfdb992-8506-40a8-bb9e-4e6ed4113f58)
-
-
-In the building of this project, i learnt how to use the read_me file, spot bugs quickly and be very observant to details.
-
+In the building of this project, i learnt how to write a READ_ME file, understand error meesages and fix them.
 MIT License
 
 Copyright (c) [2023] [Nouah Akoni]
