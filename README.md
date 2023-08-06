@@ -67,16 +67,18 @@ You'll be getting the following when all installation and guide is well followed
 regiser user:
 ![register](https://github.com/Greatnex1/social-media-api/assets/72028378/98494969-7b62-43b8-b10c-bc8f6e57a0f8)
 
+
+
+I used maildev to serve as a platform for pseudo mails, so, a verification link and welcome message is sent to an individual who just registered.
+![verified](https://github.com/Greatnex1/social-media-api/assets/72028378/93b6e65e-c695-46c3-b1ee-03c04cdbacac)
+
+
 user login:
 ![login](https://github.com/Greatnex1/social-media-api/assets/72028378/22750642-34aa-4e08-8c7c-b2ecadfb8797)
 
 comment on the post created:
 ![comment](https://github.com/Greatnex1/social-media-api/assets/72028378/d5a666da-6c5f-448c-ad4a-02e5e3af8781)
 
-
-I used maildev to serve as a platform for pseudo mails, so, a verification link and welcome message is sent to an individual who just registered.
-
-![verified](https://github.com/Greatnex1/social-media-api/assets/72028378/93b6e65e-c695-46c3-b1ee-03c04cdbacac)
 
 All configurations are in a yaml.file integrated with application.properties.
 
