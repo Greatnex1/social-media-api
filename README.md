@@ -59,6 +59,8 @@ $ mvn dependency:tree
 If you run mvn dependency:tree again, you see that there are now a number of additional dependencies, including the Tomcat web server and Spring Boot itself.
 
 
+All dependencies used are in the pom.xml file
+
 You'll be getting the following when all installation and guide is well followed
 
 
