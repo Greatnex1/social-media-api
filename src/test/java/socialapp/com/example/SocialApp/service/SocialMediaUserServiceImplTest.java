@@ -88,10 +88,6 @@ class SocialMediaUserServiceImplTest {
     }
 
     @Test
-    void verifyUser() {
-    }
-
-    @Test
     void findAllUser() {
       platformUser.findAllUser();
       verify(platformUserRepository).findAll();
@@ -119,9 +115,6 @@ class SocialMediaUserServiceImplTest {
       log.info("Followers ->{}",platformUserRepository.findAll());
     }
 
-    @Test
-    void findAllFollowing() {
-    }
 
     @Test
     void deleteUserAccount() throws UserAlreadyExistException, MessagingException {
@@ -149,25 +142,27 @@ class SocialMediaUserServiceImplTest {
 
     @Test
     void addFollower() {
+      UserDto user =new UserDto();
+
+      user.setEmail("sel@mail.com");
+      user.setPassword("1234");
+      SocialMediaUser platuser =new SocialMediaUser();
+      user.setUserName("sella");
+      platuser.setId(2L);
+      platuser.setEmail("sel@mail.com");
+      platuser.setPassword(user.getPassword());
+
+
+      UserDto user1 =new UserDto();
+
+      user.setEmail("sel@mail.com");
+      user.setPassword("1234");
+      SocialMediaUser platuser1 =new SocialMediaUser();
+      user.setUserName("sella");
+      platuser1.setId(2L);
+      platuser1.setEmail("son@mail.com");
+      //  platuser.setFirstName(user.getUserName());
+      platuser.setPassword(user1.getPassword());
     }
 
-    @Test
-    void addFollowing() {
-    }
-
-    @Test
-    void findForumUser() {
-    }
-
-    @Test
-    void unfollowUser() {
-    }
-
-    @Test
-    void deleteAllUser() {
-    }
-
-    @Test
-    void testFindForumUser() {
-    }
 }

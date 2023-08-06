@@ -8,6 +8,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.modelmapper.ModelMapper;
+import socialapp.com.example.SocialApp.entity.Comment;
 import socialapp.com.example.SocialApp.entity.Post;
 import socialapp.com.example.SocialApp.entity.SocialMediaUser;
 import socialapp.com.example.SocialApp.repository.CommentRepository;
@@ -114,31 +115,18 @@ class PostServiceImplTest {
 
     @Test
     void addCommentToPost() {
+        Post post = new Post();
+        post.setId(1L);
+        post.setPostUser("Jane");
+        post.setContent("Testing post");
 
+        postRepository.save(post);
+        Comment comment = new Comment();
+        comment.setContent("Good");
+      commentRepository.save(comment);
+      assertThat(commentRepository).isNotNull();
 
     }
 
-    @Test
-    void deleteComment() {
-    }
 
-    @Test
-    void likePost() {
-    }
-
-    @Test
-    void unLikePost() {
-    }
-
-    @Test
-    void deleteAllPost() {
-    }
-
-    @Test
-    void findPostByUser() {
-    }
-
-    @Test
-    void updatePost() {
-    }
 }
