@@ -1,0 +1,66 @@
+app.baseUrl: http://localhost:8080
+
+
+
+
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+    port: 8080
+
+
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: ${database_username}
+    password: ${database_password}
+    url: ${database_url}
+
+
+
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: ${google_client_id}
+            clientSecret: ${google_client_secret}
+            scope:
+              - email
+              - profile
+
+          facebook:
+            clientId: ${facebook_client_id}
+            clientSecret: ${faceboook_client_secret}
+            scope:
+              - email
+              - public_profile
+  mail:
+    host: localhost
+    port: 1025
+    username: ${maildev_username}
+    password: ${maildev_password}
+
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: false
+          socket:
+            enable: false
+          connection-timeout: 5000
+          timeout: 3000
+          write-timeout: 5000
+
+    protocol: smtp
