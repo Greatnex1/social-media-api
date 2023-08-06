@@ -1,6 +1,3 @@
-# social-media-api
-a social app where users can post, comment, follow and unfollow other users and like post.
-
 Social Media Api
 
 A social  media api that enable users to post,comment,follow users,unfollow users, like posts.
