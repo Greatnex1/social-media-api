@@ -48,6 +48,8 @@ public class SocialMediaUser {
     @Enumerated(EnumType.STRING)
     private AuthenticationType authType;
 
+    private String dateCreated;
+
 
     private boolean active;
 
