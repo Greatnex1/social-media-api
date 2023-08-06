@@ -88,8 +88,9 @@ All dependency used are in the pom.xml
 
 
 In the building of this project, i learnt how to write a READ_ME file, understand error meesages and fix them.
-MIT License
 
+
+MIT License
 Copyright (c) [2023] [Nouah Akoni]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
