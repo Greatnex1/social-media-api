@@ -16,7 +16,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     username: ${database_username}
     password: ${database_password}
-    url: ${database_url}
+    url: ${database_url_address}
 
 
 
