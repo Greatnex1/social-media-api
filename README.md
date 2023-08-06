@@ -82,6 +82,8 @@ All configurations are in a yaml.file integrated with application.properties.
 
 Test was carried out using mockito.
 
+All dependency used are in the pom.xml
+
 
 In the building of this project, i learnt how to write a READ_ME file, understand error meesages and fix them.
 MIT License
