@@ -82,14 +82,13 @@ comment on the post created:
 ![comment](https://github.com/Greatnex1/social-media-api/assets/72028378/d5a666da-6c5f-448c-ad4a-02e5e3af8781)
 
 
-All configurations are in a yaml.file integrated with application.properties.
+All configurations are stored in a yaml.file integrated with application.properties.
 
 Test was carried out using mockito.
 
-All dependency used are in the pom.xml
 
 
-In the building of this project, i learnt how to write a READ_ME file, understand error meesages and fix them.
+In the building of this project, i learnt how to write a READ_ME file and interpret error meesages.
 
 
 MIT License
