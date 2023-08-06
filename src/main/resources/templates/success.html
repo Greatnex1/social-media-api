@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Cabin&family=DM+Sans&family=Fira+Sans&family=Manrope:wght@200&family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;800&family=Poppins&family=Roboto:wght@100;300;400;700&display=swap"
+            rel="stylesheet"
+    />
+    <title>Activation</title>
+</head>
+<style>
+    body {
+        background-color: #ccc;
+    }
+
+    .activation-wrap {
+        min-height: 380px;
+        width: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        box-shadow: black;
+        padding: 30px;
+        border-radius: 5px;
+    }
+
+    .act-img {
+        height: 150px;
+        width: auto;
+    }
+
+    .image,
+    .act-header,
+    .act-text,
+    .login {
+        text-align: center;
+        font-family: 'DM Sans', sans-serif;    }
+
+    .button {
+        padding: 10px 30px;
+        background-color: #2b7833;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+    }
+
+
+    .act-header {
+        padding-bottom: 30px;
+    }
+
+    .act-text {
+        background-color: #ccc;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 900px) {
+        .activation-wrap {
+            width: 70%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            box-shadow:black;
+            padding: 30px;
+            border-radius: 5px;
+        }
+    }
+</style>
+<body>
+<div class="activation-wrap">
+    <div class="image">
+        <img class="act-img" th:src="@{
+https://res.cloudinary.com/irespond/image/upload/v1675941286/76649-checked_yy2ah6.gif}" alt="" />
+    </div>
+    <div class="act-header">Account Activated</div>
+    <div class="act-text">
+        Congratulations! Your account has be activated successfully. <br> Proceed to login
+    </div>
+
+</div>
+</body>
+</html>

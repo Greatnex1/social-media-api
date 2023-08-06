@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Fira+Sans&family=Manrope:wght@200&family=Montserrat:wght@400;600&family=Poppins&family=Roboto:wght@100;300;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e5e5e5;
+}
+
+.emailbody {
+    max-width: 600px;
+    min-height: 679px;
+    margin: auto;
+    background-color: white;
+}
+
+p {
+    font-family: "Poppins",serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    /* or 21px */
+
+    color: #424243;
+}
+
+.logo {
+    text-align: center;
+    padding-top: 42.86px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.content {
+    text-align: justify;
+}
+
+.btn-primary {
+    background: #2b7833;
+    border-radius: 4px;
+    border: none;
+    font-family: "Poppins",serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    width: 300px;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #08280b !important;
+
+    color: #ffffff;
+}
+
+.footer {
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .emailbody {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+    }
+    p {
+        font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+    }
+    .btn-primary {
+        width: 250px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    p {
+        font-size: 14px;
+    }
+}
