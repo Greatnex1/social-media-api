@@ -64,7 +64,8 @@ All dependencies used are in the pom.xml file
 You'll be getting the following when all installation and guide is well followed
 
 
-![loading](https://github.com/Greatnex1/social-media-api/assets/72028378/37e17fea-a99f-4796-afda-940a04745da9)
+![loading](https://github.com/Greatnex1/social-media-api/assets/72028378/05fb0f5a-c7d5-4780-bcd9-8d2d23d12519)
+
 
 regiser user:
 ![register](https://github.com/Greatnex1/social-media-api/assets/72028378/98494969-7b62-43b8-b10c-bc8f6e57a0f8)
