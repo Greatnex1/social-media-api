@@ -2,7 +2,7 @@ Social Media Api
 
 A social  media api that enable users to post, comment, follow users, unfollow users, like posts.
 
-How to install this project: clone repository, open in intellij or visual studio code. This project is built on java(version 11), maven bild tool and springboot an extension of spring framework.
+How to install this project: clone repository, open in intellij or visual studio code. This project is built on java(version 11), maven build tool and springboot an extension of spring framework.
 
 
 To use this project make sure you already have JDK installation on your system, (Either set the JAVA_HOME environment variable pointing to your JDK installation or have the java executable on your PATH), maven and springframework.
