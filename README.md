@@ -86,7 +86,7 @@ comment on the post created:
 ![comment](https://github.com/Greatnex1/social-media-api/assets/72028378/941a048a-f5d5-4df2-bb52-ddf3fd6eca3c)
 
 
-All configurations are stored in a yaml.file integrated with application.properties.
+All configurations are stored in a .yml file integrated with a .properties file
 
 Test was carried out using mockito.
 
