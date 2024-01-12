@@ -1,6 +1,6 @@
 Social Media Api
 
-A social  media api that enable users to post, comment, follow users, unfollow users, like posts.
+A social  media REST api that enable users to post, comment, follow users, unfollow users, like posts.
 
 How to install this project: clone repository, open in intellij or visual studio code. This project is built on java(version 11), maven build tool and springboot an extension of spring framework.
 
