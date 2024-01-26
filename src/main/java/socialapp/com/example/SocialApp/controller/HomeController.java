@@ -22,11 +22,11 @@ public class HomeController {
     @GetMapping("/user/verify")
 
     public String welcomeMessage(@RequestParam(value = "token") @NotBlank String token, Model model) {
-        model.addAttribute("welcome", "Welcome to Fun Way");
+        model.addAttribute("welcome", "Welcome to Fun Room");
 
        try{
            socialMediaUserService.verifyUser(token);
-           model.addAttribute("welcome", "Welcome to Fun Way");
+           model.addAttribute("welcome", "Welcome to Fun Room");
            return "success";
        }catch(MessagingException| SocialMediaUserException| InvalidTransactionException e){
            model.addAttribute("welcome", e.getMessage());

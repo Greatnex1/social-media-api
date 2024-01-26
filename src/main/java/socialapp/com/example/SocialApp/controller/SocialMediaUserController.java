@@ -35,6 +35,7 @@ import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -192,4 +193,29 @@ catch (Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());
 }
     }
+    @GetMapping("/users/following/{user_id}")
+    public ResponseEntity<?> findAllFriendsAmFollowing(@PathVariable("user_id") Long user_id) {
+
+        return ResponseEntity.ok(userService.findAllFollowing(user_id));
+    }
+
+    @GetMapping("/users/followers/{user_id}")
+    public ResponseEntity<?> findFollowers(@PathVariable("user_id") Long user_id) {
+
+        return ResponseEntity.ok(userService.findAllFollowers(user_id));
+    }
+
+    @PostMapping("/user/manage-network/follower")
+    public void addFollower(@RequestParam @NotBlank(message = "user cannot be blank") String user,
+                            @RequestParam String follower) {
+        userService.addFollower(user, follower);
+    }
+
+    @PostMapping("/user/manage-network/following")
+    public void addFollowing(@RequestParam @NotBlank(message = "user cannot be blank") String user,
+                             @RequestParam String following) {
+        userService.addFollowing(user, following);
+    }
+
+
 }
