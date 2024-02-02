@@ -1,90 +1,52 @@
+version: "3.8"
 services:
   web:
-    build: .
-    container_name:
+    build:
+      dockerfile: Dockerfile
+    container_name: web
     ports:
-      - 8080:8080
+      - 8081:8081
     environment:
-          db-url: jdbc:postgresql://db:5432/soicalmediastorage
-          db-username: 
-          db-password:
-      depends_on:
-        -db
-
-      restart: always
-
-
+      SPRING_APPLICATION_JSON: '{
+        "spring.datasource.url": "jdbc:postgresql://db:5432/social_media_storage",
+        "spring.datasource.username": "postgres",
+        "spring.datasource.password": "postgres",
+        "spring.jpa.hibernate.ddl-auto": "update"
+      }'
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: always
+    networks:
+      - postgres-db-network
   db:
+    image: postgres:latest
+    container_name: db
     ports:
       - 5432:5432
-    container_name:
-    image: postgres
-    restart: always
-    environment:
-      POSTGRES_PASSWORD:
-    healthcheck:
-      test: [“CMD-SHELL”, “pg_isready”]
-        interval    : 1s
-      timeout: 5s
-        retries: 10
-
-    adminer:
-      image: adminer
-      restart: always
-      ports:
-        - 8080:8080
-
-
-#app:
-  dataSource:
-    postgres:
-      port: 5432
-      username: postgres
-      password: password
-      host: localhost
-      databaseName: socialmediastorage
-      jdbc-url: jdbc:postgresql://${app.datasource.postgres.host}:${app.dataSource.postgres.port}/${app.dataSource.postgres.databaseName}
-
-
-
-version: '3.8'
-#services:
-  postgres:
-    restart: always
-    image: postgres:alpine
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
-    ports:
-      - 5432:5432
-    networks:
-      - postgres-db-network
-
-  pgadmin:
-    image: dpage/pgadmin4
     environment:
-      PGADMIN_DEFAULT_EMAIL: 'teste@teste.com'
-      PGADMIN_DEFAULT_PASSWORD: 'teste'
-    ports:
-      - 16543:80
-    volumes:
-      - ./servers.json:/pgadmin4/servers.json
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=social_media_storage
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    expose:
+      - 5432
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     networks:
       - postgres-db-network
-
-volumes:
-  postgres-db-volume:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: ./data
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
 networks:
   postgres-db-network:
     driver: bridge
-
-
-   # version: '3'
-
+volumes:
+  postgres-db-volume:
